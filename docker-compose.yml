@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./backend
+    container_name: iprep-backend
+    volumes:
+      - ./backend/db:/app/db:ro
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: iprep-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    restart: unless-stopped

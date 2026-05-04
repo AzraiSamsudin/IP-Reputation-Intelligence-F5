@@ -1,0 +1,21 @@
+# Secret env files
+.env
+**/.env
+
+# F5 reputation database
+*.dat
+**/db/
+
+# Python
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Node
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+
+# Podman/Docker
+.dockerignore
