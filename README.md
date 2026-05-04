@@ -25,9 +25,9 @@ iprep/
 
 ## Setup
 
-### 1. Place the F5IpRep.dat file
+### 1. Place the .dat file
 ```
-backend/db/F5IpRep.dat
+backend/db/<FILE>.dat
 ```
 
 ### 2. Backend (FastAPI)
@@ -35,7 +35,7 @@ backend/db/F5IpRep.dat
 cd backend
 pip install -r requirements.txt
 python app.py
-# Runs on http://localhost:5000
+# Runs on http://localhost:5000 
 # Auto docs available at http://localhost:5000/docs
 ```
 
@@ -44,7 +44,7 @@ python app.py
 cd frontend
 npm install
 npm run dev
-# Runs on http://localhost:5173
+# Runs on http://localhost:5173 if in vite.config.js is set to localhost, 
 ```
 
 Open http://localhost:5173 in your browser.
@@ -53,10 +53,10 @@ Open http://localhost:5173 in your browser.
 
 | Method | Path             | Description                              |
 |--------|------------------|------------------------------------------|
-| POST   | /api/lookup      | Single IP lookup `{"ip": "1.2.3.4"}`    |
+| POST   | /api/lookup      | Single IP lookup `{"ip": "1.2.3.4"}`     |
 | POST   | /api/batch       | Batch lookup `{"ips": ["1.2.3.4", ...]}` |
 | GET    | /api/rate-status | Current rate limit counters              |
-| GET    | /api/status      | Server + F5 DB status                    |
+| GET    | /api/status      | Server + DB status                       |
 | GET    | /docs            | Auto-generated Swagger UI (FastAPI)      |
 
 ## Rate Limits
