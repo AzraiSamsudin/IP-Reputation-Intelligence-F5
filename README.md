@@ -10,7 +10,7 @@ iprep/
 │   ├── app.py              # FastAPI server (async)
 │   ├── requirements.txt
 │   └── db/
-│       └── F5IpRep.dat     # ← place your .dat file here
+│       └── .dat     # ← place your .dat file here
 └── frontend/
     ├── src/
     │   ├── App.svelte
